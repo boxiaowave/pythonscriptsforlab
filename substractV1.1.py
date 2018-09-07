@@ -53,7 +53,7 @@ def showoneround(picdir,b,column=4,row=2):
         ax2.set_title(couple[0][-10:-7]+' counts:%.2e'%tocounts)
         plt.colorbar(im2,ax=ax2)
     plt.show()
-    
+
 def showoneround2(picdir,b,ax2):
     files = os.listdir(picdir)
     f1list = [s for s in files if s[-6:] == '1.tiff']
@@ -78,7 +78,6 @@ def showoneround2(picdir,b,ax2):
     im2=ax2.imshow(fabsbin, cmap='jet',vmin=100,vmax=300)
     ax2.set_title('Binned '+picdir[-8:-1]+' ')
     plt.colorbar(im2,ax=ax2)
-    
 
 if __name__=='__main__':
     b = [4,4]
